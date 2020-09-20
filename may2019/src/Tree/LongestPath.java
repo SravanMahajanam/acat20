@@ -65,4 +65,26 @@ public class LongestPath {
 
         return Math.max(ls, rs) + 1;
     }
+
+    public int longestLeafToLeafPath(TreeNode root) {
+        int[] max = new int[1];
+        auxLongestLeafToLeafPath(root, max);
+        return max[0];
+    }
+
+    private int  auxLongestLeafToLeafPath(TreeNode root, int[] max) {
+        if (root == null) {
+            return 0;
+        }
+
+        if (root.left == null && root.right == null) {
+            return 1;
+        }
+
+        int lLen = auxLongestLeafToLeafPath(root.left, max);
+        int rLen = auxLongestLeafToLeafPath(root.right, max);
+
+        max[0] = Math.max(max[0], lLen + rLen); // this will hold the max value passed with out root
+        return Math.max(lLen, rLen) + 1;
+    }
 }

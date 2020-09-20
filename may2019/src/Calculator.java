@@ -49,7 +49,7 @@ public class Calculator {
 
     private static int getPriority(String op) {
         if (op.equals("+") || op.equals("-"))
-            return 1;
+        return 1;
         else if (op.equals("*") || op.equals("/"))
             return 2;
         return -1;

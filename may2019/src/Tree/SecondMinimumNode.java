@@ -1,7 +1,5 @@
 package Tree;
 
-import org.omg.PortableInterceptor.INACTIVE;
-
 public class SecondMinimumNode {
 
     public static int secondMinNode(TreeNode root) {

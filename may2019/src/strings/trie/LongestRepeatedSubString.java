@@ -2,7 +2,7 @@ package strings.trie;
 
 import java.util.Arrays;
 
-public class LongestRepeatedSubString {
+public class    LongestRepeatedSubString {
 
     public static int longRepSubStr1(String string) {
         int maxLength = 0;

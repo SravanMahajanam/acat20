@@ -28,9 +28,9 @@ public class RotateString {
         for (int i = 0; i < offset; ++i) {
             str[i] = newArray[str.length - offset + i];
         }
-        for (int i = offset; i<str.length;++i) {
-            str[i] = newArray[i - offset];
-        }
+//        for (int i = offset; i<str.length;++i) {
+//            str[i] = newArray[i - offset];
+//        }
         return new String(str);
     }
 
@@ -43,6 +43,6 @@ public class RotateString {
 
     public static void main(String[] args) {
         char[] in = "cppjavapy".toCharArray();
-        rotateString("cppjavapy", 2);
+        rotateString("cppjavapy", 4);
     }
 }

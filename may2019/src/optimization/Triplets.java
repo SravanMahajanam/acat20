@@ -64,8 +64,25 @@ public class Triplets {
         return count >2;
     }
 
-        public static void main(String[] args) {
-        int[] nums = {6,1,5,4,2,3};
-        System.out.println(increasingTriplet2(nums));
+    public static boolean increasingTriples(int[] nums) {
+        int firstLargest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+        int count = 0;
+        for (int i = 0; i <= nums.length - 1; ++i) {
+            if (nums[i] > Math.min(firstLargest, secondLargest)) {
+                count++;
+                if (secondLargest < firstLargest) {
+                    secondLargest = nums[i];
+                } else {
+                    firstLargest = nums[i];
+                }
+            }
+        }
+        return count > 2;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {6,9,5,4,2,3};
+        System.out.println(increasingTriples(nums));
     }
 }

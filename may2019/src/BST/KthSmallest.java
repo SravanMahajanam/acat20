@@ -45,4 +45,11 @@ public class KthSmallest {
         }*/
         return res;
     }
+
+    public static void main(String[] args) {
+        BSTCreator creator = new BSTCreator();
+        System.out.println(findKthSmallest1(creator.sortedArrayToBST(new int[]{1,2,3,4,5,6,7,8,9}), 2));
+    }
+
+
 }

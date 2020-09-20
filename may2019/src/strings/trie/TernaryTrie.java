@@ -13,7 +13,6 @@ public class TernaryTrie implements ITrie {
         if (root == null) {
             root = temp;
         }
-
     }
 
     private TernaryNode auxAdd(TernaryNode current, String string) {

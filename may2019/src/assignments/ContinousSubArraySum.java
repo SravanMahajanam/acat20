@@ -52,7 +52,25 @@ public class ContinousSubArraySum {
         return sum;
     }
 
+    public static boolean isContinousSubArrayExists(int[] in, int k) {
+        int left = 0, right = 0;
+        int currSum = 0;
+        while (left < in.length && right < in.length) {
+            if (currSum < k) {
+                currSum += in[right];
+                right++;
+            } else if (currSum > k) {
+                currSum -= in[left];
+                left++;
+            }
+            else {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
-        System.out.println(chkContSubArrSum(new int[] {0, 2, 9, 0, 5}, 6));
+        System.out.println(isContinousSubArrayExists(new int[] {10, 2, 4, 0, 5}, 6));
     }
 }

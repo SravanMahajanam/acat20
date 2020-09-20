@@ -7,7 +7,7 @@ public class Ceil {
             return Integer.MIN_VALUE;
         }
         int element = ceilElement1(root.left, x);
-        if (ceilElement1(root.left, x) > x) {
+        if (element > x) {
             return element;
         }
         if (root.val >= x) {
